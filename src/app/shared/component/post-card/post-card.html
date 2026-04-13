@@ -1,19 +1,19 @@
+<mat-card class="custom-card mb-3">
+  <mat-card-header class="alert-info">
+    <mat-card-title>
+      {{ postobj.title }}
+    </mat-card-title>
+  </mat-card-header>
 
+  <mat-card-content>
+    <p class="m-0">
+      {{ postobj.body }}
+    </p>
+  </mat-card-content>
 
-{{postobj|json}}
-<mat-card class="h-100">
-    <mat-card-header>
-        <mat-card-title>
-            {{postobj.title}}
-        </mat-card-title>
-    </mat-card-header>
-
-    <mat-card-content>
-        <p class="m-0">
-            {{postobj.body}}        </p>
-    </mat-card-content>
-
-    <mat-card-actions>
-        <button matButton class="w-100">View More</button>
-    </mat-card-actions>
+  <mat-card-actions>
+  <button
+  [routerLink]="['/posts',postobj.id]"
+  matButton class="w-100" >View More</button>
+  </mat-card-actions>
 </mat-card>
