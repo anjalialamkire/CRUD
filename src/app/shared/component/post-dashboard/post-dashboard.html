@@ -1,0 +1,9 @@
+
+
+<div class="row">
+    @for(post of _postsService.postsSignal(); track post.id){
+    <div class="col-md-4">
+         <app-post-card [postobj]="post"></app-post-card>
+    </div>
+    }
+</div>
